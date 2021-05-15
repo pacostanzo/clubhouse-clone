@@ -1,5 +1,6 @@
 import {
   BrowserRouter,
+  Switch,
   Route,
 } from 'react-router-dom/cjs/react-router-dom.min';
 import { GlobalStyle } from './global.style';
@@ -8,17 +9,30 @@ import PlanLayout from './layouts/PlanLayout';
 import WelcomePage from './pages/Welcome/';
 import PhoneConfirmationPage from './pages/PhoneConfimation/';
 import CodeConfirmPage from './pages/CodeConfirm';
+import AllowNotificationPage from './pages/AllowNotification';
 
 function App() {
   return (
     <div>
       <GlobalStyle />
       <BrowserRouter>
-        <PlanLayout>
-          <Route exact path="/" component={WelcomePage} />
-          <Route exact path="/invite" component={PhoneConfirmationPage} />
-          <Route exact path="/code_confirm" component={CodeConfirmPage} />
-        </PlanLayout>
+        <Route
+          exact
+          path={['/', '/invite', '/code_confirm', '/allow_notification']}
+        >
+          <PlanLayout>
+            <Switch>
+              <Route exact path="/" component={WelcomePage} />
+              <Route exact path="/invite" component={PhoneConfirmationPage} />
+              <Route exact path="/code_confirm" component={CodeConfirmPage} />
+              <Route
+                exact
+                path="/allow_notification"
+                component={AllowNotificationPage}
+              />
+            </Switch>
+          </PlanLayout>
+        </Route>
       </BrowserRouter>
     </div>
   );

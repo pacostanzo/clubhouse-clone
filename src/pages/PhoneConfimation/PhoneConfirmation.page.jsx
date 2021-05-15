@@ -1,24 +1,20 @@
 import React, { useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
+import BackButton from '../../components/BackButton';
+import NextButton from '../../components/NextButton';
 
 import {
   PhoneConfirmationContainer,
   Title,
   Paragraph,
   TermsOfService,
-  BackButton,
-  NextButton,
-  BackIcon,
-  NextIcon,
 } from './PhoneConfirmation.style';
 
 const PhoneConfirmationPage = (props) => {
   const [phone, setPhone] = useState('');
   return (
     <PhoneConfirmationContainer>
-      <BackButton exact to="/">
-        <BackIcon src="/images/arrow.png" alt="" />
-      </BackButton>
+      <BackButton to={'/'} icon="/images/arrow.png" />
       <Title>Enter your phone</Title>
       <PhoneInput
         international
@@ -31,13 +27,7 @@ const PhoneConfirmationPage = (props) => {
         <TermsOfService>Terms of Service and Privacy Policy. </TermsOfService>
         Thanks!
       </Paragraph>
-      <NextButton
-        exact
-        to="/code_confirm"
-        className="d-flex align-items-center"
-      >
-        Next <NextIcon src="/images/nextArrowIcon.svg" alt="" />
-      </NextButton>
+      <NextButton to="/code_confirm" icon="/images/nextArrowIcon.svg" />
     </PhoneConfirmationContainer>
   );
 };
