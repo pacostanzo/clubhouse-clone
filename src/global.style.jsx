@@ -17,4 +17,11 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Neutrif Pro';
   }
 
+  button {
+    outline: none !important;
+  }
+
+  a {
+    text-decoration: none;
+  }
 `;

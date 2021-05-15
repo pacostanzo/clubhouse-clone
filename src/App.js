@@ -1,8 +1,13 @@
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import {
+  BrowserRouter,
+  Route,
+} from 'react-router-dom/cjs/react-router-dom.min';
 import { GlobalStyle } from './global.style';
-import PlanLayout from './pages/Layouts/PlanLayout';
+import PlanLayout from './layouts/PlanLayout';
 
-import WelcomePage from './pages/Welcome/Welcome.page';
+import WelcomePage from './pages/Welcome/';
+import PhoneConfirmationPage from './pages/PhoneConfimation/';
+import CodeConfirmPage from './pages/CodeConfirm';
 
 function App() {
   return (
@@ -10,7 +15,9 @@ function App() {
       <GlobalStyle />
       <BrowserRouter>
         <PlanLayout>
-          <WelcomePage />
+          <Route exact path="/" component={WelcomePage} />
+          <Route exact path="/invite" component={PhoneConfirmationPage} />
+          <Route exact path="/code_confirm" component={CodeConfirmPage} />
         </PlanLayout>
       </BrowserRouter>
     </div>
