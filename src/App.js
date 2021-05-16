@@ -5,11 +5,13 @@ import {
 } from 'react-router-dom/cjs/react-router-dom.min';
 import { GlobalStyle } from './global.style';
 import PlanLayout from './layouts/PlanLayout';
+import AppLayout from './layouts/AppLayout';
 
 import WelcomePage from './pages/Welcome/';
 import PhoneConfirmationPage from './pages/PhoneConfimation/';
 import CodeConfirmPage from './pages/CodeConfirm';
 import AllowNotificationPage from './pages/AllowNotification';
+import HomePage from './pages/Home';
 
 function App() {
   return (
@@ -32,6 +34,13 @@ function App() {
               />
             </Switch>
           </PlanLayout>
+        </Route>
+        <Route exact path={['/home']}>
+          <AppLayout>
+            <Switch>
+              <Route exact path="/home" component={HomePage} />
+            </Switch>
+          </AppLayout>
         </Route>
       </BrowserRouter>
     </div>
