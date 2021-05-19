@@ -6,6 +6,7 @@ import {
   PeopleImageContainer,
   PeopleTitle,
   ShowMoreButton,
+  ConversationCard,
 } from './Explore.style';
 import data from '../../data/Explore.json';
 
@@ -31,6 +32,20 @@ const ExplorePage = (props) => {
           Show more people <DownOutlined />
         </ShowMoreButton>
       </PeopleContainer>
+      <h6>FIND CONVERSATION ABOUT...</h6>
+      <div className="row mx-0">
+        {conversation.map((item) => (
+          <div className="col-6 px-2 mb-3">
+            <ConversationCard>
+              <h6>
+                <FireOutlined />
+                {item.title}
+              </h6>
+              <p>{item.description}</p>
+            </ConversationCard>
+          </div>
+        ))}
+      </div>
     </ExploreContainer>
   );
 };

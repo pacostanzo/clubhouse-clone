@@ -51,6 +51,16 @@ export const PeopleContainer = styled.div`
     text-overflow: ellipsis;
     color: #aaaaaa;
   }
+
+  & button {
+    background-color: transparent;
+    border: 2px solid var(--btnBgColor);
+    border-radius: 2em;
+    color: var(--btnBgColor);
+    font-weight: 400;
+    font-size: 1em;
+    padding: 0.1em 1.2em;
+  }
 `;
 
 export const PeopleImageContainer = styled.div`
@@ -79,5 +89,30 @@ export const ShowMoreButton = styled.button`
     font-size: 0.775em !important;
     margin-top: 0.4em;
     margin-left: 0.5em;
+  }
+`;
+
+export const ConversationCard = styled.div`
+  background-color: #ffffff;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  box-shadow: 0px 2px 3px #cccccc;
+
+  & h6 {
+    color: var(--textColor);
+    font-size: 1em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    & span {
+      margin-right: 0.2em;
+    }
+  }
+  & p {
+    margin: 0;
+    color: #aaaaaa;
+    line-height: 1.2;
+    font-size: 0.8em;
   }
 `;
