@@ -12,6 +12,7 @@ import PhoneConfirmationPage from './pages/PhoneConfimation/';
 import CodeConfirmPage from './pages/CodeConfirm';
 import AllowNotificationPage from './pages/AllowNotification';
 import HomePage from './pages/Home';
+import ExplorePage from './pages/Explore';
 
 function App() {
   return (
@@ -35,10 +36,11 @@ function App() {
             </Switch>
           </PlanLayout>
         </Route>
-        <Route exact path={['/home']}>
+        <Route exact path={['/home', '/explore']}>
           <AppLayout>
             <Switch>
               <Route exact path="/home" component={HomePage} />
+              <Route exact path="/explore" component={ExplorePage} />
             </Switch>
           </AppLayout>
         </Route>
