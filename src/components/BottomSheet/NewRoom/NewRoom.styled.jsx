@@ -108,3 +108,57 @@ export const AudioIcon = styled.div`
     color: #28ae61;
   }
 `;
+
+export const RoomDetailFooter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+
+  & button {
+    background-color: #e7e4d5;
+    border: none;
+    border-radius: 2em;
+
+    & img {
+      width: 30px;
+    }
+  }
+
+  & > button {
+    display: flex;
+    align-items: center;
+    padding: 0.3em 1em;
+    color: #28ae61;
+    font-weight: 500;
+  }
+
+  & div {
+    display: flex;
+    align-items: center;
+    & button {
+      line-height: 1;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & > button:first-child {
+      font-size: 1.5em;
+      margin-right: 0.5em;
+    }
+    & > button:nth-child(2) {
+      margin-right: 0.5em;
+    }
+    & > button:nth-child(3) {
+      font-size: 1.5em;
+    }
+  }
+`;
