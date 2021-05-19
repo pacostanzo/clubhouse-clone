@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FcGlobe } from 'react-icons/fc';
-import styled from 'styled-components';
 import {
   SwitchLine,
   AddTopicContainer,
@@ -21,7 +20,7 @@ const StartRoom = ({ setSheetCreateRoom, setSheetVisible }) => {
       </AddTopicContainer>
       <SelectRoom>
         <button
-          className={room == 'open' ? 'active' : ''}
+          className={room === 'open' ? 'active' : ''}
           onClick={() => setRoom('open')}
         >
           <div>
@@ -30,7 +29,7 @@ const StartRoom = ({ setSheetCreateRoom, setSheetVisible }) => {
           Open
         </button>
         <button
-          className={room == 'social' ? 'active' : ''}
+          className={room === 'social' ? 'active' : ''}
           onClick={() => setRoom('social')}
         >
           <div>
@@ -39,7 +38,7 @@ const StartRoom = ({ setSheetCreateRoom, setSheetVisible }) => {
           Social
         </button>
         <button
-          className={room == 'closed' ? 'active' : ''}
+          className={room === 'closed' ? 'active' : ''}
           onClick={() => setRoom('closed')}
         >
           <div>

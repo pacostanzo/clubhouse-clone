@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { RoomInfoCardContainer, RoomMembers } from './RoomInfoCard.style';
 import { BsChatDots, BsChatDotsFill, BsFillPersonFill } from 'react-icons/bs';
 import data from './../../data/roomCard.json';
