@@ -1,5 +1,6 @@
 import React from 'react';
 import { DownOutlined, FireOutlined } from '@ant-design/icons';
+import { Input } from 'antd';
 import {
   ExploreContainer,
   PeopleContainer,
@@ -7,13 +8,31 @@ import {
   PeopleTitle,
   ShowMoreButton,
   ConversationCard,
+  ExplorerHeader,
 } from './Explore.style';
+
 import data from '../../data/Explore.json';
+import SubHeader from '../../components/SubHeader';
 
 const ExplorePage = (props) => {
   const { people, conversation } = data;
   return (
     <ExploreContainer>
+      <ExplorerHeader>
+        <SubHeader pageTitle="EXPLORE" />
+        <Input
+          style={{
+            backgroundColor: '#f4f4f4',
+            borderRadius: '0.8em',
+            padding: '0.3em 1em',
+            border: 'none',
+            boxShadow: 'none',
+          }}
+          size="large"
+          placeholder="Find People and Clubs"
+          prefix={<img src="/images/search.png" width="15px" />}
+        ></Input>
+      </ExplorerHeader>
       <h6>PEOPLE TO FOLLOW</h6>
       <PeopleContainer>
         {people.map((item) => (

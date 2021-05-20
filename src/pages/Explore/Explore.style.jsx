@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Input } from 'antd';
 
 export const ExploreContainer = styled.div`
   padding: 0 0.5em;
@@ -115,4 +116,14 @@ export const ConversationCard = styled.div`
     line-height: 1.2;
     font-size: 0.8em;
   }
+`;
+
+export const ExplorerHeader = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #f2f0e4;
+  z-index: 5;
+  padding: 0.5em;
 `;
