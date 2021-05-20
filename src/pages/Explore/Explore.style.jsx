@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Input } from 'antd';
 
 export const ExploreContainer = styled.div`
   padding: 0 0.5em;

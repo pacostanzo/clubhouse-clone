@@ -13,6 +13,7 @@ import CodeConfirmPage from './pages/CodeConfirm';
 import AllowNotificationPage from './pages/AllowNotification';
 import HomePage from './pages/Home';
 import ExplorePage from './pages/Explore';
+import ProfilePage from './pages/Profile';
 
 function App() {
   return (
@@ -36,11 +37,12 @@ function App() {
             </Switch>
           </PlanLayout>
         </Route>
-        <Route exact path={['/home', '/explore']}>
+        <Route exact path={['/home', '/explore', '/profile']}>
           <AppLayout>
             <Switch>
               <Route exact path="/home" component={HomePage} />
               <Route exact path="/explore" component={ExplorePage} />
+              <Route exact path="/profile" component={ProfilePage} />
             </Switch>
           </AppLayout>
         </Route>

@@ -16,14 +16,13 @@ import {
 
 const NewRoom = ({ cardDetail, setSheetVisible }) => {
   const [micMuteVisible, setMicMuteVisible] = useState(true);
-  const [itemsVisible, setItemsVisible] = useState(true);
   return (
     <>
       <RoomDetailContainer>
         <Head>
           <ImageContainer>
             <a
-              href="#"
+              href="#/"
               onClick={() => {
                 setSheetVisible(false);
               }}

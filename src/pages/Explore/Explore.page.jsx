@@ -30,7 +30,7 @@ const ExplorePage = (props) => {
           }}
           size="large"
           placeholder="Find People and Clubs"
-          prefix={<img src="/images/search.png" width="15px" />}
+          prefix={<img src="/images/search.png" alt="" width="15px" />}
         ></Input>
       </ExplorerHeader>
       <h6>PEOPLE TO FOLLOW</h6>
